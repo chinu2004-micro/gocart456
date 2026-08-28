@@ -1,16 +1,15 @@
 'use client'
-import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function PublicLayout({ children }) {
-
     return (
-        <>
-            <Banner />
+        <div className="min-h-screen bg-[#F3EEE7]">
             <Navbar />
-            {children}
+            <main className="flex-1">
+                {children}
+            </main>
             <Footer />
-        </>
+        </div>
     );
 }
