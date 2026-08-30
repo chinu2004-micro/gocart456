@@ -34,11 +34,11 @@ const Hero = () => {
                     </div>
 
                     <div className="relative animate-scaleIn" style={{ animationDelay: '0.2s' }}>
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#DED6CC]">
+                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-[#DED6CC]">
                             <Image 
                                 src={productDummyData[0].images[0]} 
                                 alt="Product Hero" 
-                                className="w-full aspect-[4/3] object-cover"
+                                className="object-cover"
                                 fill
                                 priority
                                 sizes="(min-width: 1024px) 500px"

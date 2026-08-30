@@ -27,11 +27,11 @@ const PromotionalBanner = () => {
                         </Link>
                     </div>
                     <div className="relative">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#333333]">
+                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-[#333333]">
                             <Image 
                                 src={productDummyData[1]?.images[0] || productDummyData[0].images[0]}
                                 alt="Promotional Product"
-                                className="w-full aspect-[4/3] object-cover"
+                                className="object-cover"
                                 fill
                                 priority
                                 sizes="(min-width: 1024px) 450px"

@@ -58,7 +58,7 @@ const FeaturedProducts = () => {
                                                     key={i} 
                                                     size={12} 
                                                     className="text-[#171717]" 
-                                                    fill={true}
+                                                    fill="currentColor"
                                                 />
                                             ))}
                                         </div>
