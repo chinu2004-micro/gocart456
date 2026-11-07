@@ -1,101 +1,115 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
 
-@layer components {
-    @keyframes marqueeScroll {
-        0% {
-            transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    @keyframes scaleIn {
-        from {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-    button {
-        cursor: pointer;
-    }
+  * {
+    border-color: var(--border-default);
+  }
+  body {
+    background-color: var(--bg-primary);
+    color: var(--fg-primary);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
-@layer utilities {
-    .animate-fadeInUp {
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .animate-fadeIn {
-        animation: fadeIn 0.5s ease-out forwards;
-    }
-    .animate-scaleIn {
-        animation: scaleIn 0.5s ease-out forwards;
-    }
-    .animate-fadeInDown {
-        animation: fadeInDown 0.5s ease-out forwards;
-    }
-    .animate-slideInLeft {
-        animation: slideInLeft 0.5s ease-out forwards;
-    }
-    .animate-slideInRight {
-        animation: slideInRight 0.5s ease-out forwards;
-    }
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-muted);
+}
+
+/* Print Styles for Professional Tax Invoice */
+@media print {
+  header,
+  footer,
+  .no-print,
+  nav,
+  aside,
+  button:not(.allow-print) {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* When an invoice modal is open, ensure only the invoice is printed */
+  body:has(#print-tax-invoice-modal) .orders-page-content {
+    display: none !important;
+  }
+
+  #print-tax-invoice-modal {
+    position: static !important;
+    inset: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  #print-tax-invoice-modal > div {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .invoice-root {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .invoice-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    color: #111827 !important;
+  }
+
+  .invoice-container * {
+    color: #111827 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .invoice-container .font-extrabold,
+  .invoice-container .font-bold,
+  .invoice-container .text-xl,
+  .invoice-container .text-base {
+    color: #000000 !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 12mm 12mm;
+  }
 }

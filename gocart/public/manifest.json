@@ -1,0 +1,31 @@
+{
+  "name": "Vellora — General Shopping",
+  "short_name": "Vellora",
+  "description": "Premium customer shopping destination featuring consumer electronics, fine apparel, furniture, and wellness essentials.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1D22",
+  "theme_color": "#0E4A57",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+

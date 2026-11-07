@@ -1,0 +1,90 @@
+/**
+ * VELLORA Design Tokens (Exact palette extracted from brand identity)
+ */
+
+:root {
+  /* Brand Palette */
+  --vellora-deep-teal: #0E4A57;
+  --vellora-teal: #1E8C9B;
+  --vellora-gold: #D9B65F;
+  --vellora-gold-light: #F3E5BC;
+  --vellora-paper: #F8F6F1;
+  --vellora-charcoal: #2B2F33;
+
+  /* Theme Surfaces (Light Mode) */
+  --bg-primary: #F8F6F1;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #EFECE6;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(248, 246, 241, 0.88);
+
+  --fg-primary: #2B2F33;
+  --fg-secondary: #4B5259;
+  --fg-muted: #727B83;
+  --fg-subtle: #A2AAB0;
+
+  --border-subtle: #ECE8E0;
+  --border-default: #DFD9CE;
+  --border-strong: #C8BEAF;
+
+  /* Signature Gradient: Teal to Gold along 135deg */
+  --gradient-brand: linear-gradient(135deg, #1E8C9B 0%, #0E4A57 45%, #D9B65F 100%);
+  --gradient-accent: linear-gradient(135deg, #0E4A57 0%, #1E8C9B 100%);
+  --gradient-gold: linear-gradient(135deg, #D9B65F 0%, #EDD898 100%);
+
+  /* Semantics */
+  --success: #1F9D6B;
+  --success-bg: #EAF8F1;
+  --warning: #E0A526;
+  --warning-bg: #FDF7EA;
+  --danger: #D1495B;
+  --danger-bg: #FBECEE;
+  --info: #1E8C9B;
+  --info-bg: #E8F6F8;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(14, 74, 87, 0.05);
+  --shadow-md: 0 4px 10px -1px rgba(14, 74, 87, 0.08), 0 2px 4px -2px rgba(14, 74, 87, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(14, 74, 87, 0.10), 0 4px 8px -4px rgba(14, 74, 87, 0.05);
+  --shadow-gold: 0 8px 20px -3px rgba(217, 182, 95, 0.25);
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Motion Presets */
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 320ms;
+  --duration-deliberate: 500ms;
+
+  --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-exit: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.dark {
+  /* Theme Surfaces (Dark Mode - Deep Teal-Black #0A1D22) */
+  --bg-primary: #0A1D22;
+  --bg-secondary: #0F282F;
+  --bg-tertiary: #16363F;
+  --bg-elevated: #183C46;
+  --bg-glass: rgba(10, 29, 34, 0.88);
+
+  --fg-primary: #F8F6F1;
+  --fg-secondary: #DFD9CE;
+  --fg-muted: #A2AAB0;
+  --fg-subtle: #727B83;
+
+  --border-subtle: #16363F;
+  --border-default: #224C57;
+  --border-strong: #316473;
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 14px 28px -4px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 8px 24px -2px rgba(217, 182, 95, 0.20);
+}

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="velloraFullRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E8C9B" />
+      <stop offset="60%" stop-color="#0E4A57" />
+      <stop offset="100%" stop-color="#D9B65F" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Mark (scale and positioned) -->
+  <g transform="translate(10, 8) scale(0.64)">
+    <path
+      d="M 22 28 C 22 16, 40 14, 50 25 C 60 14, 78 16, 78 28 C 78 46, 54 78, 50 84 C 46 78, 22 46, 22 28 Z"
+      stroke="url(#velloraFullRibbon)"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M 36 30 C 36 22, 44 20, 50 26 C 56 20, 64 22, 64 30 C 64 42, 50 62, 50 62"
+      stroke="url(#velloraFullRibbon)"
+      stroke-width="4.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.85"
+    />
+    <g transform="translate(80, 16)">
+      <path
+        d="M 0 -8 Q 0 0 8 0 Q 0 0 0 8 Q 0 0 -8 0 Q 0 0 0 -8 Z"
+        fill="#D9B65F"
+      />
+    </g>
+  </g>
+
+  <!-- Wordmark: VELLORA (High contrast serif style) -->
+  <text
+    x="85"
+    y="44"
+    font-family="'Playfair Display', 'Cormorant Garamond', 'Georgia', serif"
+    font-size="32"
+    font-weight="700"
+    letter-spacing="3"
+    fill="#0E4A57"
+  >
+    VELLORA
+  </text>
+
+  <!-- Tagline: GENERAL SHOPPING (Small, wide-tracked charcoal capitals) -->
+  <text
+    x="87"
+    y="60"
+    font-family="'Inter', -apple-system, sans-serif"
+    font-size="8.5"
+    font-weight="600"
+    letter-spacing="5"
+    fill="#2B2F33"
+    opacity="0.75"
+  >
+    GENERAL SHOPPING
+  </text>
+</svg>
+
