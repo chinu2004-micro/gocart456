@@ -1,7 +1,7 @@
 [build]
   base = "gocart"
   command = "npm run build"
-  publish = "gocart/.next"
+  publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
